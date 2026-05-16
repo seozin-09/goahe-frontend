@@ -15,7 +15,12 @@ export default function RootLayout() {
   return (
     <>
       <StatusBar style="light" translucent />
-      <Stack screenOptions={{ headerShown: false }} />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="login" />
+        <Stack.Screen name="signup" />
+        <Stack.Screen name="(tabs)" />
+        {/* ✅ records/[id] 는 자동으로 라우팅되므로 따로 등록 안 해도 됨 */}
+      </Stack>
     </>
   );
 }
